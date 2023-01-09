@@ -87,6 +87,7 @@ def show_post(post_id):
 
 # Route to edit a specific post when clicked from its show_post page.
 # Reuses WTForm from creating a new post w/ fields already filled.
+# is_edit variable is used to signal in make-post.html what to change the h1 title to.
 @app.route('/edit-post/<post_id>', methods=["GET", "POST"])
 def edit_post(post_id):
     post = BlogPost.query.get(post_id)
